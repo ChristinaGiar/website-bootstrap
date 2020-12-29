@@ -111,7 +111,6 @@ button:hover  .box{
 
 .link-1 a{
     position: absolute;
-    /* bottom:20%;  */ /* the img is placed above the bg. transform is needed */
     transform: translate(0, -5%);
 }
 
@@ -123,7 +122,6 @@ a.link-2{
 
 a.link-3{
     position: absolute;
-    /* top:2%; */
     transform: translate(0, 65%);
 }
 
@@ -230,7 +228,6 @@ hr{
 .treasure-img{
     /* Cs of relative black-bg, img moves when text is altered */
     position: absolute;
-    /* bottom: 1%; NOT HELPFUL */
     right: -6%;
     transform: translate(0%, -80%);
     z-index: -1;        /* NOT inside the IMG */
