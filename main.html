@@ -20,11 +20,11 @@
     <nav class="navbar navbar-dark fixed-top">
         <a class="navbar-brand" href="#main.html"><img class="child img-fluid" src="imgs/The Brand Of Rebrand.png"
                 alt=""></a>
-        <button class="navbar-toggler mr-sm-4 mt-4" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+        <button class="navbar-toggler mr-sm-4 mt-4" data-toggle="collapse" data-target="#navLinks">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav bg-light pl-2 pt-5 pb-4 text-center border-left border-right border-dark">
+        <div class="collapse navbar-collapse" id="navLinks">
+            <div id="menu" class="navbar-nav bg-light pl-2 pt-5 pb-4 text-center border-left border-right border-dark">
                 <div class="flex-center-vertically">
                     <a class="nav-link active text-dark" href="#home">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-link text-dark" href="#intro">About Us</a>
@@ -57,7 +57,7 @@
     </nav>
 
     <!-- ------------------- CAROUSEL ------------------------ -->
-    <div class="header-hero">
+    <div id="home" class="header-hero">
         <div id="carouselExampleIndicators" class="carousel slide position-absolute " data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -94,6 +94,15 @@
         </div>
     </div>
 
+    <!-- <div id="home" class="header-hero mx-0">
+        <img class="px-md-5 hello img-fluid position-absolute" src="imgs/hello.jpg" alt="">
+        <div class="first-title img-fluid">
+            <h1>The</h1>
+            <h1>Brand</h1>
+            <h1>Of</h1>
+            <h1>Rebrand</h1>
+        </div>
+    </div> -->
 
     <!-- ------------------- INTRODUCTION ------------------------ -->
     <section class="container-fluid mx-0">
@@ -282,6 +291,38 @@
         </div>
     </section>
 
+    <!-- ------------------- FREE-CALL ------------------------ -->
+    <section class="container">
+        <div class="row free-call elem-centered align-items-center">
+            <div class="col-md-8 border">
+                <h2 class="border">BOOK NOW</h2>
+                <p>A FREE call with us</p>
+                <button class="button">Free call<div class="box"></div></button>
+
+            </div>
+            <div class="col-md-4 mt-5 mt-sm-none border">
+                <div class="timer">
+                    <p id="days"></p>
+                    <h6>Days</h6>
+                </div>
+
+                <div class="timer">
+                    <p id="hours"></p>
+                    <h6>Hours</h6>
+                </div>
+                <div class="timer">
+                    <p id="minutes"></p>
+                    <h6>Minutes</h6>
+                </div>
+
+                <div class="timer">
+                    <p id="seconds"></p>
+                    <h6>Seconds</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ------------------- FOOTER ------------------------ -->
     <footer>
         <div class="container" id="footer">
@@ -318,6 +359,17 @@
                 <a href=""><i class="fab fa-staylinked"></i></a>
 
             </div>
+            <!-- <div class="row ">
+                <div class="col-4 border d-flex justify-content-end">
+                    <button class="button">Data Protection</button>
+                </div>
+                <div class="col-4 border d-flex justify-content-center">
+                    <button class="button">FAQ</button>
+                </div>
+                <div class="col-4 border d-flex justify-content-start">
+                    <button class="button">Contact</button>
+                </div>
+            </div> -->
         </div>
     </footer>
 
@@ -332,6 +384,7 @@
 
 
 
+    <script src="app.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
