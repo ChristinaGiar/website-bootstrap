@@ -12,8 +12,6 @@ let x = setInterval(() => {
     document.querySelector('#hours').innerText = hours;
     document.querySelector('#minutes').innerText = minutes;
     document.querySelector('#seconds').innerText = seconds;
-
-
 })
 
 
@@ -25,7 +23,6 @@ for (link of links) {
     link.addEventListener('click', function () {
         // When clicked, remove show. When menu(nav-toggler) is clicked show it again
         navLinks.classList.toggle('show')
-
     })
 }
 
