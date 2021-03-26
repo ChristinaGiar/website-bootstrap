@@ -2,11 +2,28 @@
     max-width: 100%;
     overflow-x: hidden;
 }
-body{
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     background-color:  white; 
     font-size: 1.7rem;
 }
 
+.brand-border {
+    border: 2px solid;
+    border-color:  #212121;
+    transition: all .8s fade-in;
+    box-sizing: border-box;
+}
+
+/* change the nav button with js*/
+.nav-button-black {
+    background: black;
+    transition: all .5s;
+}
 
 .header-hero {
     height: 100vh;
@@ -22,107 +39,104 @@ body{
     transform: translate(0%, -20%);
 }
 
-.first-title{
+.first-title {
     color:yellow;
     z-index: 2;
     position: absolute;
     left: 13%;
     transform: translate(0%, -160%);
 }
-.first-title h1{
+.first-title h1  {
 font-weight: 200;
 font-size: 6rem;
 }
-.first-title h1:nth-child(2n){
+
+.first-title h1:nth-child(2n) {
     font-weight: 400;
 }
 
-/* in large size divices */
- @media(max-width: 1500px){ 
-    .first-title{
-
+/* in large size devices */
+@media(max-width: 1500px) { 
+    .first-title {
         transform: translate(0%, -140%);
     }
 } 
-.nav-icons{
+
+.nav-icons {
     display: none;
 }
 
 /* ==================== ABOUT ================== */
 
-.intro{
+.intro {
     margin-top: 14rem;
     padding-top: 10rem;
     padding-left: 7%;
     padding-right: 7%;
 }
 
-.intro-headline{
+.intro-headline {
     margin-bottom: 3rem;
 }
 
 /* ============== BUTTON ============== */
-button{
+button {
     font-weight: 500;
     border: none;
     background-color: transparent;
-    outline: none;
-    outline-color: initial;
-    outline-style: none;
-    outline-width: initial; 
-    
 }
 
+button:active, 
+button:focus {                   
+    outline: none;
+}
 
-.button{
+.button {
     position: relative;
     margin: 0;
     display: inline-block;
-    }
+}
 
-.box{
+.box {
     width: 100%;
     height: 13px;
     background-color: yellow;
     margin:0;
     position: absolute;
-    transition:background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
     transform: translate(0%, -113%);
     z-index: -1;
 }
 
-button:hover  .box{
+.button:hover .box {
     background-color:#FC9D6D;
+    
 }
 
-
 /* ============== TOPICS =============== */
-
-
-.black-bg{
+.black-bg {
     margin-top: 22rem;
     height: auto;
     padding-bottom: 12rem;
-    /* display: flex; */
     align-items: center;
     background-color: #212121;
     position: relative;
     z-index: 0;  /* used for the treasure img */
 }
 
-.link-1 a{
+.link-1 a {
     position: absolute;
     /* bottom:20%;  */ /* the img is placed above the bg. transform is needed */
     transform: translate(0, -5%);
 }
 
-a.link-2{
+a.link-2 {
     position: absolute;
     /* top:2%; */
     transform: translate(0, -40%);
 }
 
-a.link-3{
+a.link-3 {
     position: absolute;
     /* top:2%; */
     transform: translate(0, 65%);
@@ -141,16 +155,15 @@ a.link-3{
     width: 100%;
     opacity: 0;
     z-index: 0;
-    transition:.4s ease-in-out;
-    background-color: purple;
-  }
+    transition:.4s ease-in-out;  
+}
   
   .container1:hover .color-show-up {
     opacity: 0.6;
 
   }
   .container1:hover .text-show-up{
-      opacity:1;
+    opacity:1;
   }
   
   .text-show-up {
@@ -166,10 +179,14 @@ a.link-3{
     -ms-transform: translate(-50%, -50%);
   }
 
+  .link-1 .color-show-up{
+    background-color: purple;
+ }
+
 
   /* ========= SECOND IMG ========== */
   .link-2 .color-show-up{
-      background-color: #008CBA;
+    background-color: #008CBA;
   }
   .link-2 .text-show-up, .link-3 .text-show-up{
     font-size: 4rem;
@@ -183,25 +200,23 @@ a.link-3{
 
 
 
-  /* ============================================================ */
-hr{
+/* ============================================================ */
+hr {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-  hr.hr-photos:nth-child(2){
-      margin-top: 60rem;
-  }
+
+hr.hr-photos:nth-child(2){
+    margin-top: 60rem;
+}
 
 
-
-@media(max-width: 768px){
+@media(max-width: 768px) {
     .child {
         position: absolute;
-        left:4.5%;
+        left: 4.5%;
         transform: translate(0%, -20%);
-      }
-    
-
+    }
 }
 
 
@@ -209,45 +224,43 @@ hr{
 
 /* ====================== WELCOME AREA ======================== */
 
-.welcome-headline{
+.welcome-headline {
     padding-top: 2rem;
     padding-bottom: 1rem;
-
 }
-.welcome-headline h2{
+
+.welcome-headline h2 {
     color:  yellow;
     font-weight: 400;
     font-size: 6rem;
     line-height: 5rem;
-
 }
 
-.welcome-text{
+.welcome-text {
     color: white;
     margin-top: 2rem;
-    /* z-index: 2; */
 }
-
-.treasure-img{
+.treasure {
+    position: relative;
+    /* background-image: url(imgs/Treasure.png); */
+}
+.treasure-img {
     /* Cs of relative black-bg, img moves when text is altered */
     position: absolute;
     /* bottom: 1%; NOT HELPFUL */
     right: -6%;
     transform: translate(0%, -80%);
     z-index: -1;        /* NOT inside the IMG */
-
 }
 
 
 
 /* ====================== COMPANIES ======================= */
-.companies{
+.companies {
     padding: 10rem 0;
 }
 
-
-
-.single-brand i{
+.single-brand i {
     padding: 2rem 5rem;
     border: 1px solid #d3d3d3;
     box-sizing: border-box;
@@ -259,27 +272,32 @@ hr{
     margin-bottom: 3rem;
 }
 
-.single-brand:hover i{
+.single-brand:hover i {
     transform: scale(1.1);
     box-shadow: 0px 0px 20px  #212121;
-    
 }
 
 
 /* ===================== FREE CALL ========================== */
-.free-call{
+.free-call {
     box-shadow: 0px 0px 10px  #212121;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+    border-radius: 3px;
 }
-.free-call h2{
-    font-size: 3rem;
+
+.free-call h2 {
+    /* font-size: 3rem; */
+    font-size: 2.3rem;
+    font-weight: 700;
     color: blueviolet;
+    
 }
-.free-call .box{
+
+.free-call .box {
     background-color:  #008CBA;
 }
 
-.timer{
+.timer {
     border-radius: 10px;
     width: 4rem;
     height: 4.5rem;
@@ -290,71 +308,74 @@ hr{
     text-align: center;
     font-size: 1.4rem;
 }
-.timer p{
+
+.timer p {
     margin: 1rem; /* so as h6 not to be outside of the box (step 1) */
 }
 
-.timer h6{
+.timer h6 {
     background-color: black;
     padding: 0.3rem;
-    margin:0;   /* step 2 */
+    margin: 0;   /* step 2 */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 10px 8px 20px black;
-
 }
 
 
 /* ===================== FOOTER ========================== */
 
-footer{
+footer {
     background-color: #212121;
     padding: 5rem 0 3rem 0;
     color: white;
-
 }
-#footer{
+
+#footer {
     color: white;
 }
 
-footer button{
+footer button {
     z-index: 0;
-    color: white; /* ONLY THIS WAY the button text will have this color */
+    color: white; 
 }
-.footer-header{
+
+.footer-header {
     padding-bottom: 4rem;
 }
-footer .box{
 
+footer .box {
     background-color: #008CBA; 
 }
+
 /* ***************************************** */
-.nav-extra-info{
+.nav-extra-info {
     display: flex;
     justify-content: center;
 }
-.navbar-nav .nav-extra-info a{
+
+.navbar-nav .nav-extra-info a {
     color:  #008CBA;
     font-size: 1.4rem;
 }
-.extra-info a{
+
+.extra-info a {
     text-decoration: none;
     color: white;
     transition: color 0.7 ease-in-out;
     font-weight: 300;
 }
-.extra-info a:hover .footer-textlink{
+.extra-info a:hover .footer-textlink {
     color: purple;
 }
 
-
-.social-icons a{
+.social-icons a {
     color:#008CBA;
 }
-.social-icons a:hover{
+.social-icons a:hover {
     color:purple;
 }
-.social-icons i{
+.social-icons i {
     font-size: 4rem;
     text-decoration: none;
     margin: 3.5rem 1.7rem;
@@ -379,22 +400,22 @@ footer .box{
 } */
 
 /* MD Screens */
-@media(max-width: 992px){
-    body{
+@media(max-width: 992px) {
+    body {
         font-size: 1.4rem;
     }
 
-    .first-title{
+    .first-title {
         left: 13%;
         transform: translate(0%, -120%);
     }
-    .first-title h1{
+    .first-title h1 {
         font-weight: 200;
         font-size: 5rem;
     }
 
 
-    .intro{
+    .intro {
         margin-top: 0rem;
         padding-top: 10rem;
         padding-left: 3%;
@@ -414,22 +435,22 @@ footer .box{
     .link-2 .text-show-up, .link-3 .text-show-up{
         font-size: 3.5rem;
         line-height: 4rem;
-      }
-
+    }
     
-    hr.hr-photos:nth-child(2){
+    hr.hr-photos:nth-child(2) {
         margin-top: 40rem;
     }
+
     .welcome-headline h2{
         font-weight: 400;
         font-size: 4rem;
         line-height: 4rem;
-    
     }
-    .companies{
+
+    .companies {
         padding: 13rem 0;
     }
-    .single-brand i{
+    .single-brand i {
         padding: 1rem 2rem;
         max-width: 10rem; /* ***** reduce the size and KEEP the content CENTERED ***** */
         margin-bottom: 1rem;
